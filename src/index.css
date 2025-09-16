@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 15% 97%;
+    --foreground: 224 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 20% 15%;
+
+    --primary: 224 25% 20%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 220 15% 95%;
+    --secondary-foreground: 224 20% 15%;
+
+    --muted: 220 15% 95%;
+    --muted-foreground: 224 12% 45%;
+
+    --accent: 220 15% 92%;
+    --accent-foreground: 224 20% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 224 25% 20%;
+
+    /* Premium Dashboard Colors */
+    --orange: 20 95% 55%;
+    --orange-foreground: 0 0% 100%;
+    --orange-muted: 20 95% 95%;
+    
+    --purple: 281 58% 40%;
+    --purple-foreground: 0 0% 100%;
+    --purple-muted: 281 58% 95%;
+    
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-muted: 142 76% 95%;
+    
+    --chart-primary: 240 65% 60%;
+    --chart-secondary: 20 95% 55%;
+    --chart-accent: 142 76% 36%;
+    --chart-muted: 220 15% 85%;
+    
+    --gauge-track: 220 15% 92%;
+    --gauge-fill: 20 95% 55%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(240 65% 60%), hsl(240 65% 70%));
+    --gradient-orange: linear-gradient(135deg, hsl(20 95% 55%), hsl(20 95% 65%));
+    --gradient-purple: linear-gradient(135deg, hsl(281 58% 40%), hsl(281 58% 50%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 15% 98%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 15% 98%), hsl(220 15% 96%));
+    
+    /* Shadows */
+    --shadow-card: 0 2px 8px -2px hsl(224 20% 15% / 0.08);
+    --shadow-hover: 0 4px 12px -4px hsl(224 20% 15% / 0.12);
+    --shadow-active: 0 1px 4px -1px hsl(224 20% 15% / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Interactive animations */
+    --pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 224 20% 12%;
+    --foreground: 220 15% 95%;
+
+    --card: 224 20% 15%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 224 20% 15%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 220 15% 95%;
+    --primary-foreground: 224 20% 15%;
+
+    --secondary: 224 20% 18%;
+    --secondary-foreground: 220 15% 95%;
+
+    --muted: 224 20% 18%;
+    --muted-foreground: 220 12% 65%;
+
+    --accent: 224 20% 20%;
+    --accent-foreground: 220 15% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 15% 95%;
+
+    --border: 224 20% 20%;
+    --input: 224 20% 20%;
+    --ring: 220 15% 95%;
+    
+    /* Premium Dashboard Colors - Dark Mode */
+    --orange: 20 95% 60%;
+    --orange-foreground: 0 0% 100%;
+    --orange-muted: 20 95% 10%;
+    
+    --purple: 281 58% 50%;
+    --purple-foreground: 0 0% 100%;
+    --purple-muted: 281 58% 10%;
+    
+    --success: 142 76% 40%;
+    --success-foreground: 0 0% 100%;
+    --success-muted: 142 76% 10%;
+    
+    --chart-primary: 240 65% 65%;
+    --chart-secondary: 20 95% 60%;
+    --chart-accent: 142 76% 40%;
+    --chart-muted: 224 20% 25%;
+    
+    --gauge-track: 224 20% 25%;
+    --gauge-fill: 20 95% 60%;
+    
+    /* Gradients - Dark Mode */
+    --gradient-primary: linear-gradient(135deg, hsl(240 65% 65%), hsl(240 65% 75%));
+    --gradient-orange: linear-gradient(135deg, hsl(20 95% 60%), hsl(20 95% 70%));
+    --gradient-purple: linear-gradient(135deg, hsl(281 58% 50%), hsl(281 58% 60%));
+    --gradient-card: linear-gradient(135deg, hsl(224 20% 15%), hsl(224 20% 18%));
+    --gradient-subtle: linear-gradient(180deg, hsl(224 20% 18%), hsl(224 20% 16%));
+    
+    /* Shadows - Dark Mode */
+    --shadow-card: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-hover: 0 4px 12px -4px hsl(0 0% 0% / 0.4);
+    --shadow-active: 0 1px 4px -1px hsl(0 0% 0% / 0.5);
+    
+    --sidebar-background: 224 20% 10%;
+    --sidebar-foreground: 220 15% 90%;
+    --sidebar-primary: 20 95% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 224 20% 18%;
+    --sidebar-accent-foreground: 220 15% 90%;
+    --sidebar-border: 224 20% 18%;
+    --sidebar-ring: 20 95% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
